@@ -8,19 +8,7 @@ function slugify(str){
     .replace(/^-+|-+$/g,'');
 }
 
-const FALLBACK_PROJECTS = [
-  {"title":"Quoridor 2D","description":"Jeu de plateau Quoridor réalisé en Python (2D) avec gestion des règles et moteur de déplacement.","tech":["Python","Pygame"],"repoUrl":"","liveUrl":"","image":"assets/images/quoridor.png"},
-  {"title":"Age of Stick 2D","description":"Jeu vidéo 2D sous Unity avec logiques de combat, niveaux et assets personnalisés.","tech":["C#","Unity"],"repoUrl":"","liveUrl":"","image":"assets/images/age-of-war.png"},
-  {"title":"Messagerie temps réel","description":"Clone léger de Teams/Discord en fullstack (Node.js + React) avec messagerie temps réel et version mobile.","tech":["Node.js","Express","Socket.IO","React","MongoDB","React Native"],"repoUrl":"","liveUrl":"","image":"assets/images/chat-app.png"},
-  {"title":"Stockage type Google Drive (en cours)","description":"Application web de stockage/partage de fichiers (projet en cours) avec gestion des droits et upload.","tech":["React","Node.js","MongoDB","Cloud Storage"],"repoUrl":"","liveUrl":"","image":"assets/images/drive-like.png"},
-  {"title":"REST APIs multi-stack","description":"Divers services REST réalisés en PHP, React et C# pour explorer plusieurs stacks backend/frontend.","tech":["PHP Laravel","React","C#","ASP.NET"],"repoUrl":"","liveUrl":"","image":"assets/images/rest-apis.png"},
-  {"title":"Téléphone IoT","description":"Prototype de téléphone IoT avec connectivité et pilotage embarqué.","tech":["IoT","C++","Arduino"],"repoUrl":"","liveUrl":"","image":"assets/images/iot-phone.png"},
-  {"title":"Application mobile Kotlin","description":"Application Android Kotlin développée sous Android Studio (UI native, navigation, stockage local).","tech":["Kotlin","Android Studio"],"repoUrl":"","liveUrl":"","image":"assets/images/kotlin-app.png"},
-  {"title":"Générateur d'incidents ServiceNow","description":"Application Python (pandas) générant des incidents aléatoires pour ServiceNow afin de simuler des flux de support.","tech":["Python","Pandas","ServiceNow"],"repoUrl":"","liveUrl":"","image":"assets/images/servicenow-generator.png"},
-  {"title":"Data WPS/SAS + Power BI","description":"Création/gestion de tables via WPS (SAS), macros et variables, puis rapport Power BI alimenté chaque mois via Power Automate (CI/CD).","tech":["SAS","WPS","SQL","Power BI","Power Automate"],"repoUrl":"","liveUrl":"","image":"assets/images/wps-powerbi.png"},
-  {"title":"Automatisation Excel vers une template","description":"Script d'automatisation pour extraire des données Excel et les redistribuer dynamiquement dans un template.","tech":["VBA","Automation"],"repoUrl":"","liveUrl":"","image":"assets/images/excel-automation.png"},
-  {"title":"Bot Discord","description":"Bot Discord lié au divertissement avec diverses commandes personnalisées.","tech":["Node.js","Discord.js"],"repoUrl":"","liveUrl":"","image":"assets/images/discord-bot.png"}
-];
+
 
 function getParam(name){
   const url = new URL(window.location.href);
@@ -37,15 +25,13 @@ async function loadProject(){
   }
 
   let list = [];
-  if(window.location.protocol === 'file:'){
-    list = FALLBACK_PROJECTS;
-  }else{
-    try{
-      const res = await fetch('projects.json');
-      list = await res.json();
-    }catch{
-      list = FALLBACK_PROJECTS;
-    }
+  try{
+    const res = await fetch('projects.json');
+    list = await res.json();
+  }catch(e){
+    console.error('Erreur chargement projets:', e);
+    container.innerHTML = `<p>Erreur lors du chargement du projet. Assurez-vous que projects.json existe.</p><p><a class="btn" href="index.html#projects">← Retour aux projets</a></p>`;
+    return;
   }
 
   const project = list.find(p => slugify(p.title) === slug);
