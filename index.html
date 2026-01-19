@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio – Votre Nom</title>
+    <title>Portfolio – Télio ANDRE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
   <body>
     <header class="site-header">
       <div class="container row between center">
-        <a href="#" class="brand">Votre Nom</a>
+        <a href="#" class="brand">Télio ANDRE</a>
         <nav class="nav">
           <a href="#about">À propos</a>
           <a href="#projects">Projets</a>
@@ -24,11 +24,11 @@
     <main>
       <section class="hero">
         <div class="container">
-          <h1>Développeur logiciel</h1>
-          <p>Je conçois, développe et maintiens des applications modernes. Voici une sélection de mes projets et réalisations.</p>
+          <h1>Etudiant en informatique</h1>
+          <p>Étudiant en informatique, je conçois des applications web, mobiles et data. Du temps réel (messagerie) au jeu vidéo (Unity), en passant par l’IoT et l’automatisation de workflows (SAS/WPS, Power BI), voici une sélection de mes projets.</p>
           <div class="actions">
             <a class="btn primary" href="#projects">Voir mes projets</a>
-            <a class="btn" href="#contact">Télécharger mon CV</a>
+            <a class="btn" href="assets/cv/telio-andre-cv.pdf" download>Télécharger mon CV</a>
           </div>
         </div>
       </section>
@@ -36,16 +36,26 @@
       <section id="about" class="section">
         <div class="container">
           <h2>À propos</h2>
-          <p>Quelques lignes sur votre parcours, vos intérêts techniques et votre valeur ajoutée. Par exemple : orienté qualité, passionné par l’architecture logicielle et l’automatisation.</p>
+          <p>Je suis développeur full‑stack avec une appétence pour les systèmes temps réel, la data et le mobile. J’ai travaillé avec Node.js, React, MongoDB/SQL, Kotlin/Android, Unity/C#, ainsi que SAS/WPS et Power BI pour la partie data. Curieux et rigoureux, j’aime transformer des besoins concrets en solutions simples et efficaces.</p>
 
           <h3>Compétences</h3>
           <ul class="tags" id="skills">
             <li>Python</li>
+            <li>Java</li>
+            <li>C#</li>
+            <li>C++</li>
+            <li>HTML & CSS</li>
             <li>JavaScript</li>
             <li>React</li>
             <li>Node.js</li>
+            <li>PHP</li>
             <li>SQL</li>
+            <li>NoSQL</li>
+            <li>SAS</li>
             <li>CI/CD</li>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+            <li>Rest API</li>
           </ul>
         </div>
       </section>
@@ -56,22 +66,29 @@
             <h2>Projets</h2>
             <div id="filters" class="filters"></div>
           </div>
-          <div id="projects-grid" class="grid"></div>
+          <div class="carousel">
+            <button class="carousel-btn prev" aria-label="Précédent">‹</button>
+            <div class="carousel-window">
+              <div id="projects-track" class="carousel-track"></div>
+            </div>
+            <button class="carousel-btn next" aria-label="Suivant">›</button>
+          </div>
+          <div id="projects-dots" class="carousel-dots"></div>
         </div>
       </section>
 
       <section id="contact" class="section">
         <div class="container">
           <h2>Contact</h2>
-          <p>Envoyez-moi un message : <a href="mailto:votre.email@example.com">votre.email@example.com</a></p>
-          <p>LinkedIn : <a href="https://www.linkedin.com/in/votreprofil" target="_blank" rel="noreferrer">linkedin.com/in/votreprofil</a></p>
+          <p>Envoyez-moi un message : <a href="mailto:telio.adr@gmail.com">telio.adr@gmail.com</a></p>
+          <p>LinkedIn : <a href="https://www.linkedin.com/in/telio-andre-41a496233/" target="_blank" rel="noreferrer">linkedin.com/in/telio-andre</a></p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container">
-        <small>© <span id="year"></span> Votre Nom. Tous droits réservés.</small>
+        <small>© <span id="year"></span> Télio ANDRE. Tous droits réservés.</small>
       </div>
     </footer>
 
