@@ -1,0 +1,26 @@
+[
+  {
+    "title": "API de gestion de tâches",
+    "description": "API REST avec authentification JWT, tests unitaires et CI/CD.",
+    "tech": ["Node.js", "Express", "PostgreSQL"],
+    "repoUrl": "https://github.com/votreprofil/todo-api",
+    "liveUrl": "",
+    "image": "assets/images/todo-api.png"
+  },
+  {
+    "title": "Tableau de bord analytique",
+    "description": "Dashboard React pour visualiser des KPIs en temps réel.",
+    "tech": ["React", "TypeScript", "Chart.js"],
+    "repoUrl": "https://github.com/votreprofil/analytics-dashboard",
+    "liveUrl": "",
+    "image": "assets/images/analytics-dashboard.png"
+  },
+  {
+    "title": "Automatisation ETL",
+    "description": "Pipeline Python pour ingérer, transformer et charger des données.",
+    "tech": ["Python", "Pandas", "SQLite"],
+    "repoUrl": "https://github.com/votreprofil/etl-pipeline",
+    "liveUrl": "",
+    "image": "assets/images/etl-pipeline.png"
+  }
+]

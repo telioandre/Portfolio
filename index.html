@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio – Votre Nom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container row between center">
+        <a href="#" class="brand">Votre Nom</a>
+        <nav class="nav">
+          <a href="#about">À propos</a>
+          <a href="#projects">Projets</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Développeur logiciel</h1>
+          <p>Je conçois, développe et maintiens des applications modernes. Voici une sélection de mes projets et réalisations.</p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">Voir mes projets</a>
+            <a class="btn" href="#contact">Télécharger mon CV</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>À propos</h2>
+          <p>Quelques lignes sur votre parcours, vos intérêts techniques et votre valeur ajoutée. Par exemple : orienté qualité, passionné par l’architecture logicielle et l’automatisation.</p>
+
+          <h3>Compétences</h3>
+          <ul class="tags" id="skills">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>SQL</li>
+            <li>CI/CD</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="row between center">
+            <h2>Projets</h2>
+            <div id="filters" class="filters"></div>
+          </div>
+          <div id="projects-grid" class="grid"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>Envoyez-moi un message : <a href="mailto:votre.email@example.com">votre.email@example.com</a></p>
+          <p>LinkedIn : <a href="https://www.linkedin.com/in/votreprofil" target="_blank" rel="noreferrer">linkedin.com/in/votreprofil</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> Votre Nom. Tous droits réservés.</small>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
