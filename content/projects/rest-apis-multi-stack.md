@@ -3,7 +3,7 @@
 ![Capture APIs](../../assets/images/rest-apis.png)
 
 ## Contexte
-Création de **REST APIs** avec différentes stacks (PHP Laravel, ASP.NET, React pour front).
+Création de **REST APIs** avec différentes stacks (PHP Symfony, ASP.NET, React pour front).
 
 ## Endpoints exemple
 ```http
@@ -12,7 +12,7 @@ POST /api/v1/items
 GET /api/v1/items/:id
 ```
 
-## Contrôleur (Laravel)
+## Contrôleur (Symfony)
 ```php
 public function store(Request $req){
   $item = Item::create($req->all());

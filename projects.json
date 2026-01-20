@@ -34,7 +34,7 @@
   {
     "title": "REST APIs multi-stack",
     "description": "Divers services REST réalisés en PHP, React et C# pour explorer plusieurs stacks backend/frontend.",
-    "tech": ["PHP Laravel", "React", "C#", "ASP.NET"],
+    "tech": ["PHP Symfony", "React", "C#", "ASP.NET"],
     "repoUrl": "",
     "liveUrl": "",
     "image": "assets/images/rest-apis.png"
