@@ -1,5 +1,23 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Scroll to top button
+const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('visible');
+  } else {
+    scrollToTopBtn.classList.remove('visible');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
 function slugify(str){
   return (str||'')
     .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
