@@ -61,7 +61,7 @@
     "tech": ["Python", "Pandas", "ServiceNow"],
     "repoUrl": "",
     "liveUrl": "",
-    "image": "assets/images/servicenow-generator.png"
+    "image": "assets/images/snow.png"
   },
   {
     "title": "Data WPS/SAS + Power BI",
@@ -69,7 +69,7 @@
     "tech": ["SAS", "WPS", "SQL", "Power BI", "Power Automate"],
     "repoUrl": "",
     "liveUrl": "",
-    "image": "assets/images/wps-powerbi.png"
+    "image": "assets/images/data_powerbi.png"
   },
   {
     "title": "Automatisation Excel vers une template",
@@ -85,6 +85,6 @@
     "tech": ["Node.js", "Discord.js"],
     "repoUrl": "",
     "liveUrl": "",
-    "image": "assets/images/discord-bot.png"
+    "image": "assets/images/bot_logo.png"
   }
 ]
