@@ -1,6 +1,5 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Scroll to top button
 const scrollToTopBtn = document.getElementById('scroll-to-top');
 
 window.addEventListener('scroll', () => {
@@ -83,7 +82,6 @@ async function loadProject(){
     </section>
   `;
 
-  // Charger un fichier markdown de détails s'il existe
   const slugified = slugify(project.title);
   const detailsPath = `content/projects/${slugified}.md`;
   try{
@@ -98,7 +96,7 @@ async function loadProject(){
       html = html.replace(/href='assets\//g, `href='${baseUrl}assets/`);
       const detailsEl = document.getElementById('details');
       detailsEl.innerHTML = html;
-      // Générer une table des matières à partir des h2/h3
+
       const headings = detailsEl.querySelectorAll('h2, h3');
       if(headings.length){
         const toc = document.createElement('nav');
@@ -124,7 +122,6 @@ async function loadProject(){
     document.getElementById('details').innerHTML = 'Aucun détail supplémentaire.';
   }
 
-  // Navigation précédent / suivant
   const slugs = list.map(p => slugify(p.title));
   const idx = slugs.indexOf(slugified);
   const prev = idx > 0 ? slugs[idx-1] : null;
