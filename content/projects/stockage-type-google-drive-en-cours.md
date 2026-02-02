@@ -1,6 +1,6 @@
 # Stockage type Google Drive – Détails du projet
 
-![Capture stockage](./assets/images/drive-like.png)
+![Capture stockage](assets/images/drive-like.png)
 
 ## Résumé
 Application de stockage en ligne sécurisé type Google Drive, conçue pour permettre aux utilisateurs d'uploader, organiser, partager et gérer des fichiers et dossiers. Le backend expose une API REST avec chiffrement des données, gestion des permissions granulaires, et partages multi-utilisateurs (privés et publics par lien).
@@ -64,7 +64,7 @@ export const authMiddleware = (req: Request, res: Response, next: NextFunction) 
 - **OAuth** : Connexion via Google/Microsoft sans mot de passe.
 - **Quota utilisateur** : Suivi en temps réel de l'espace utilisé vs. limite disponible.
 
-![Auth & comptes (placeholder)](./assets/images/placeholder-auth-user.png)
+![Auth & comptes (placeholder)](assets/images/placeholder-auth-user.png)
 
 ---
 
@@ -96,7 +96,7 @@ NodeSchema.index({ userId: 1, name: "text", type: 1, deleted: 1 });
 - **Dossiers système** : Racine, corbeille, dossiers partagés (marqués pour éviter suppression).
 - **Recherche optimisée** : Index texte natif MongoDB pour recherche rapide par nom.
 
-![Hiérarchie fichiers (placeholder)](./assets/images/placeholder-file-hierarchy.png)
+![Hiérarchie fichiers (placeholder)](assets/images/placeholder-file-hierarchy.png)
 
 ---
 
@@ -169,7 +169,7 @@ export const moveFileFromTemp = async (tempPath, destDir, originalName) => {
 - AuthTag GCM pour vérification d'intégrité.
 - Limite : 30 GB par fichier (configurable).
 
-![Upload chiffrement (placeholder)](./assets/images/placeholder-upload-encryption.png)
+![Upload chiffrement (placeholder)](assets/images/placeholder-upload-encryption.png)
 
 ---
 
@@ -215,7 +215,7 @@ export const getUserFiles = async (req: Request, res: Response) => {
 - **Fichiers récents** : Endpoint dédié pour historique.
 - **Info stockage** : Espace utilisé, limite, pourcentage quota.
 
-![Métadonnées & recherche (placeholder)](./assets/images/placeholder-metadata-search.png)
+![Métadonnées & recherche (placeholder)](assets/images/placeholder-metadata-search.png)
 
 ---
 
@@ -265,7 +265,7 @@ export const downloadFile = async (req: Request, res: Response) => {
 - Vérification intégrité via authTag GCM.
 - Prévisualisation possible pour images/PDF.
 
-![Déchiffrement & téléchargement (placeholder)](./assets/images/placeholder-download-decryption.png)
+![Déchiffrement & téléchargement (placeholder)](assets/images/placeholder-download-decryption.png)
 
 ---
 
@@ -317,7 +317,7 @@ export const shareFolder = async (req: Request, res: Response) => {
 
 **Sécurité** : Chaque accès vérifie l'invitation existante avec statut `accepted`.
 
-![Partages privés (placeholder)](./assets/images/placeholder-private-sharing.png)
+![Partages privés (placeholder)](assets/images/placeholder-private-sharing.png)
 
 ---
 
@@ -376,7 +376,7 @@ export const createPublicLink = async (req: Request, res: Response) => {
 - Vérification : password (bcrypt), expiration, limite téléchargements.
 - Compteur incrémenté à chaque accès.
 
-![Partages publics (placeholder)](./assets/images/placeholder-public-sharing.png)
+![Partages publics (placeholder)](assets/images/placeholder-public-sharing.png)
 
 ---
 
@@ -423,7 +423,7 @@ export const restoreFromTrash = async (req: Request, res: Response) => {
 - Restauration possible pendant 30 jours.
 - Suppression physique automatique (job cron).
 
-![Corbeille (placeholder)](./assets/images/placeholder-trash.png)
+![Corbeille (placeholder)](assets/images/placeholder-trash.png)
 
 ---
 
@@ -454,7 +454,7 @@ export const cleanupTempOnStartup = async (): Promise<CleanupResult> => {
 - Nettoyage périodique : fichiers temp > 1h, corbeille > 30 jours.
 - Logging : nombre fichiers supprimés, espace libéré, erreurs.
 
-![Nettoyage (placeholder)](./assets/images/placeholder-cleanup.png)
+![Nettoyage (placeholder)](assets/images/placeholder-cleanup.png)
 
 ---
 
@@ -502,7 +502,7 @@ export const checkSharedWritePermission = async (req: Request, res: Response, ne
 - Validation stricte : ObjectIds, noms (255 char max), permissions énumérées.
 - Rate limiting, HTTPS, CORS, secrets en env.
 
-![Sécurité & validation (placeholder)](./assets/images/placeholder-security-validation.png)
+![Sécurité & validation (placeholder)](assets/images/placeholder-security-validation.png)
 
 ---
 
@@ -548,7 +548,7 @@ export const generateUniqueName = async (
 - `rapport.pdf` → `rapport (1).pdf` → `rapport (2).pdf`
 - `archive.tar.gz` → `archive (1).tar.gz`
 
-![Nommage unique (placeholder)](./assets/images/placeholder-unique-naming.png)
+![Nommage unique (placeholder)](assets/images/placeholder-unique-naming.png)
 
 ---
 

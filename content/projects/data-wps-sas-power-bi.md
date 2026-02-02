@@ -61,7 +61,7 @@ Le modèle repose sur **quatre entités centrées sur le client** (une entrepris
 - Vérification anti-doublons : marquage "Hors Pôles" si entreprise associée à plusieurs pôles
 - Macro-programme de vérification comptant les occurrences par ID unique et pôle associé
 
-![Macro-programme de vérification des doublons](./assets/images/data_doublons.png)
+![Macro-programme de vérification des doublons](assets/images/data_doublons.png)
 *Macro-programme vérifiant qu'une entreprise n'est associée qu'à un seul pôle*
 
 **Entité Polices**
@@ -101,7 +101,7 @@ Pour répondre à la demande croissante d'historisation, j'ai créé des **table
 - Colle les données dans la table d'historisation
 - Vérification de date pour éviter les doublons (une seule entrée par date)
 
-![Macro-programme d'ajout à l'historique](./assets/images/data_historique.png)
+![Macro-programme d'ajout à l'historique](assets/images/data_historique.png)
 *Macro-programme automatisant l'ajout des données quotidiennes avec vérification de date*
 
 ### 3. Export et intégration SharePoint
@@ -142,7 +142,7 @@ Chaque table a été exportée sous forme de feuille dans un **fichier Excel uni
 - **Graphiques** : Répartition par tranche d'âge, télétransmission, collecte e-mails
 - **Charte graphique** : Intégration de la charte visuelle de l'entreprise
 
-![Rapport Power BI - Vue Pôle](./assets/images/data_powerbi.png)
+![Rapport Power BI - Vue Pôle](assets/images/data_powerbi.png)
 *Vue du rapport Power BI avec visualisations par tranches d'âge, genre, état Noemie et type de bénéficiaire*
 
 **Détection d'anomalies**

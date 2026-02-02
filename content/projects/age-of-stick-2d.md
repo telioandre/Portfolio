@@ -1,6 +1,6 @@
 # Age of Stick 2D – Tower Defense contre vagues d'ennemis
 
-![Capture du jeu](./assets/images/age-of-war.png)
+![Capture du jeu](assets/images/age-of-war.png)
 
 ## Contexte
 Jeu 2D Tower Defense en **Unity** (C#) inspiré d'Age of War. Joueur contre IA dans des vagues successives : construire/améliorer des tours (turrets), générer du cash, recruter unités, viser et ajuster la vitesse de jeu. Intégration **Photon PUN2** pour multijoueur, **PlayFab** pour le cloud save, **Photon Chat** pour la communication. Architecture modulaire : GameManager central, Player/IA controllers, Turret/Castle builders, systèmes de collision détaillés, gestion réseau et ui.

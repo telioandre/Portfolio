@@ -90,7 +90,10 @@ async function loadProject(){
     const res = await fetch(detailsPath);
     if(res.ok){
       const md = await res.text();
-      const html = window.marked ? window.marked.parse(md) : md.replace(/\n/g,'<br>');
+      let html = window.marked ? window.marked.parse(md) : md.replace(/\n/g,'<br>');
+      // Corriger les chemins relatifs des images et vidéos dans le markdown
+      html = html.replace(/src="assets\//g, 'src="./assets/');
+      html = html.replace(/src='assets\//g, "src='./assets/");
       const detailsEl = document.getElementById('details');
       detailsEl.innerHTML = html;
       // Générer une table des matières à partir des h2/h3
