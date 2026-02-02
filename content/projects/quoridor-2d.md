@@ -1,6 +1,6 @@
 # Quoridor 2D
 
-![Quoridor 2D](/assets/images/quoridor.png)
+![Quoridor 2D](./assets/images/quoridor.png)
 
 ## Contexte
 
@@ -42,7 +42,7 @@ QuoridorPython/
 └── save.txt             # Fichier de sauvegarde de partie
 ```
 
-![Menu principal du jeu](/assets/images/quoridor.png)
+![Menu principal du jeu](./assets/images/quoridor.png)
 *Menu principal avec sélection du mode de jeu*
 
 ## Technologies utilisées
@@ -120,7 +120,7 @@ class CaseBarrier:
 - Compteur de barrières restantes par joueur
 - Interface de sélection (mouvements possibles en surbrillance)
 
-![Plateau de jeu en cours](/assets/images/quoridor_board.png)
+![Plateau de jeu en cours](./assets/images/quoridor_board.png)
 *Partie en cours avec pions et barrières placées*
 
 **Assets :**
@@ -129,7 +129,7 @@ class CaseBarrier:
 - `images/` : Sprites et backgrounds
 - `son/` : Effets sonores (placement barrière, victoire) et musique
 
-![Écran de paramètres](/assets/images/quoridor_settings.png)
+![Écran de paramètres](./assets/images/quoridor_settings.png)
 *Configuration des paramètres de jeu (difficulté, mode, etc.)*
 
 ### 4. **Gestion des conditions de victoire (win.py)**
@@ -252,7 +252,7 @@ python client.py --server 127.0.0.1 --port 5000
 ## Vidéo de démonstration
 
 <video width="100%" controls style="border-radius: 12px; border: 1px solid var(--border);">
-  <source src="/assets/videos/Demo_Quoridor.mp4" type="video/mp4">
+  <source src="./assets/videos/Demo_Quoridor.mp4" type="video/mp4">
   Votre navigateur ne supporte pas la lecture de vidéos.
 </video>
 

@@ -1,6 +1,6 @@
 # Messagerie temps réel – Détails du projet
 
-![Capture messagerie](/assets/images/chat-app.png)
+![Capture messagerie](./assets/images/chat-app.png)
 
 ## Résumé
 Application de messagerie **temps réel** type Teams/Discord, conçue pour le travail collaboratif en entreprise : espaces de travail, salons, conversations privées, notifications et modération. Le projet est découpé en **3 modules** (backend, web, mobile) avec une architecture orientée API REST + Socket.IO.
@@ -49,7 +49,7 @@ router.get("/google/callback", passport.authenticate("google", { session: false 
 });
 ```
 
-![Auth flow (placeholder)](/assets/images/placeholder-auth-flow.png)
+![Auth flow (placeholder)](./assets/images/placeholder-auth-flow.png)
 
 ### Profils & préférences utilisateur
 - Profil enrichi (nom, avatar, poste, localisation, horaires).
@@ -68,7 +68,7 @@ channelNotificationBlock: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Channel
 conversationNotificationBlock: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Conversation' }]
 ```
 
-![Profil utilisateur (placeholder)](/assets/images/placeholder-profile.png)
+![Profil utilisateur (placeholder)](./assets/images/placeholder-profile.png)
 
 ### Organisations, espaces & accès
 - **Sociétés** : création, vérification, branding (logo/couleur), membres, whitelist.
@@ -83,7 +83,7 @@ router.post('/workspace', authMiddleware, uploadFile(...).single('logo'), create
 router.get('/workspace/:id/members', authMiddleware, getMembersDetails);
 ```
 
-![Organisation & workspace (placeholder)](/assets/images/placeholder-organization.png)
+![Organisation & workspace (placeholder)](./assets/images/placeholder-organization.png)
 
 ### Rôles & permissions (RBAC)
 - Rôles hiérarchisés (rang, couleur, admin workspace).
@@ -101,7 +101,7 @@ if (!isWorkspaceAdmin && !canKick) {
 }
 ```
 
-![Rôles & permissions (placeholder)](/assets/images/placeholder-roles.png)
+![Rôles & permissions (placeholder)](./assets/images/placeholder-roles.png)
 
 ### Salons & conversations
 - Salons publics/privés/protégés.
@@ -117,7 +117,7 @@ router.get('/channel/:id/pinnedMessages', authMiddleware, getChannelPinnedMessag
 router.get('/conversation/:id/pinnedMessages', authMiddleware, getConversationPinnedMessages);
 ```
 
-![Salons & conversations (placeholder)](/assets/images/placeholder-channels.png)
+![Salons & conversations (placeholder)](./assets/images/placeholder-channels.png)
 
 ### Messages & contenus
 - Message temps réel (Socket.IO) avec création/édition/suppression.
@@ -148,7 +148,7 @@ const fileAttachment = await FileAttachmentModel.create({ fileName, fileType, fi
 req.body.fileAttachmentIds = fileAttachments;
 ```
 
-![Messages & contenus (placeholder)](/assets/images/placeholder-messages.png)
+![Messages & contenus (placeholder)](./assets/images/placeholder-messages.png)
 
 ### Temps réel & présence
 - Sessions Socket par utilisateur.
@@ -165,7 +165,7 @@ socketServer.on('connection', async (socket) => {
 });
 ```
 
-![Temps réel & présence (placeholder)](/assets/images/placeholder-realtime.png)
+![Temps réel & présence (placeholder)](./assets/images/placeholder-realtime.png)
 
 ### Notifications
 - Notifications persistées (création, lecture, mise à jour).
@@ -179,7 +179,7 @@ router.post("/", authMiddleware, readNotification);
 router.put("/:id", authMiddleware, updateNotification);
 ```
 
-![Notifications (placeholder)](/assets/images/placeholder-notifications.png)
+![Notifications (placeholder)](./assets/images/placeholder-notifications.png)
 
 ### Modération & sécurité
 - Ban/kick/unban au niveau workspace.
@@ -194,7 +194,7 @@ router.put('/:id/ban', authMiddleware, roleWorkspaceMiddleware, canBanMiddleware
 router.put('/:id/unban', authMiddleware, roleWorkspaceMiddleware, canBanMiddleware, unBanFromWorkspace);
 ```
 
-![Modération & sécurité (placeholder)](/assets/images/placeholder-moderation.png)
+![Modération & sécurité (placeholder)](./assets/images/placeholder-moderation.png)
 
 ### Intégrations & enrichissements
 - Embeds GitHub (repo, issue, PR, org, profil).
@@ -208,7 +208,7 @@ issue.value = await githubStore.getIssue(props.data.owner, props.data.repo, prop
 const t = await fetchGoogleDocTitle(props.data.url);
 ```
 
-![Intégrations (placeholder)](/assets/images/placeholder-integrations.png)
+![Intégrations (placeholder)](./assets/images/placeholder-integrations.png)
 
 ## Médias
 - Vidéo (placeholder): https://example.com/demo-chat

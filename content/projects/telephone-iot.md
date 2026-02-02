@@ -1,6 +1,6 @@
 # Téléphone IoT
 
-![Téléphone IoT](/assets/images/iot-phone.png)
+![Téléphone IoT](./assets/images/iot-phone.png)
 
 ## Contexte
 
