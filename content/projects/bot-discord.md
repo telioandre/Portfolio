@@ -9,28 +9,28 @@ Bot perso **Discord.js v14** orienté communauté : gacha d'emotes, profils util
 - Tirages quotidiens `/tirage` (reset midi/minuit) avec raretés, craft et échange d'emotes.
 - Cooldown visible via timestamp relatif `<t:...:R>`, correction auto des cooldowns invalides, mises à jour d'emotes serveur en arrière-plan.
 - Embeds paginés quand la collection dépasse 1024 caractères/champ, leaderboards dédiés.
-![Tirage du bot](../../assets/images/bot_tirage.png)
+![Tirage du bot](/assets/images/bot_tirage.png)
 
 ### Profils & stats utilisateur
 - Commande `/user` : collecte messages/réactions récents, canaux favoris, activité (scores + ratios), estimation de total via échantillonnage.
 - Buttons d'interaction (rafraîchir/détails), upsert des stats en base avec fallback si l'écriture échoue.
 - Gestion des timeouts guild et interactions expirées pour éviter les échecs silencieux.
-![Profil utilisateur](../../assets/images/bot_user.png)
+![Profil utilisateur](/assets/images/bot_user.png)
 
 ### Classements & compétitif
 - Elo, win rate, pulls/emotes, ranks ; commandes admin (`setElo`, `givePulls`, `resetTirage`).
 - Embeds paginés pour gros volumes, validations côté commande pour éviter le spam.
-![Classement](../../assets/images/bot_classement.png)
+![Classement](/assets/images/bot_classement.png)
 
 ### Mini-jeux
 - Pokemon Wordle (cache initialisé au boot), guess number, quiz citation, boutons de défis.
 - Gestion des réactions/messages pour la boucle de jeu, sécurisée contre les timeouts Discord.
-![Jeu du Wordle Pokemon](../../assets/images/bot_wordle.png)
+![Jeu du Wordle Pokemon](/assets/images/bot_wordle.png)
 
 ### Maintenance & santé
 - Anniversaires (notifications planifiées), nettoyage de threads inactifs.
 - HTTP healthcheck `/health` pour Render, retry de port en dev (gestion EADDRINUSE), logs shard disconnect.
-![Logs de démarrage](../../assets/images/bot_logs.png)
+![Logs de démarrage](/assets/images/bot_logs.png)
 
 ## Architecture & stack
 - **Entrypoint** : `main.js` lance le client, bind HTTP (port dynamique, retries en dev), init cache Pokémon, connectBot.

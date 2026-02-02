@@ -39,13 +39,13 @@ Script Python générant des incidents aléatoires avec les champs critiques Ser
 
 Approche probabiliste : création d'incidents variés avec différentes combinaisons de champs pour tester la robustesse du système ServiceNow.
 
-![Slider nombre d'incidents](../../assets/images/snow_nombre.png)
+![Slider nombre d'incidents](/assets/images/snow_nombre.png)
 *Slider pour déterminer le nombre d'incidents à générer (1-1000)*
 
-![Répartition impact](../../assets/images/snow_impact.png)
+![Répartition impact](/assets/images/snow_impact.png)
 *Configuration de la répartition des impacts (low/medium/high) via sliders*
 
-![Graphique catégories](../../assets/images/snow_graph.png)
+![Graphique catégories](/assets/images/snow_graph.png)
 *Exemple de diagramme circulaire : répartition des catégories pour 10 incidents générés (Inquiry 40%, Hardware 30%, Database 20%, Software 10%)*
 
 ### 2. Intégration API ServiceNow
@@ -74,7 +74,7 @@ Exécution manuelle ou planifiée (Windows batch/scheduler) :
 - Logs détaillés (fichier + console)
 - Reporting erreurs
 
-![Vue table ServiceNow](../../assets/images/snow.png)
+![Vue table ServiceNow](/assets/images/snow.png)
 *Vue de la table incident dans ServiceNow après génération : champs parent, made_sla, caused_by, watch_list, upon_reject, sys_updated_on, child_incidents, hold_reason visibles*
 
 ---

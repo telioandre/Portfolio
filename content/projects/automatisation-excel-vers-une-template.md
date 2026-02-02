@@ -1,6 +1,6 @@
 # Automatisation Excel vers une template – Détails du projet
 
-![Automatisation Excel](../../assets/images/excel-automation.png)
+![Automatisation Excel](/assets/images/excel-automation.png)
 
 ## Contexte
 Macro VBA pour l'extraction et la consolidation de données de temps depuis un fichier source vers une template de workload. Le script récupère les heures par utilisateur/activité, les catégorise (BUILD/RUN/TRANSVERSE) et alimente un classeur cible de manière dynamique.
@@ -34,7 +34,7 @@ derniereColonneSource = wsSource.Cells(5, wsSource.Columns.Count).End(xlToLeft).
 - Référencement de 3 feuilles (source, cible, mapping des activités).
 - Identification dynamique des limites (nombre de lignes et colonnes).
 
-![Import données (placeholder)](../../assets/images/placeholder-import-data.png)
+![Import données (placeholder)](/assets/images/placeholder-import-data.png)
 
 ### 2. Détermination des types d'activité
 ```vb
@@ -61,7 +61,7 @@ End If
 - Scan de la ligne 4 pour identifier les colonnes de transition (RUN, TRANSVERSE).
 - Détermination du type d'activité selon la colonne analysée.
 
-![Classification activités (placeholder)](../../assets/images/placeholder-activity-type.png)
+![Classification activités (placeholder)](/assets/images/placeholder-activity-type.png)
 
 ### 3. Indexation des utilisateurs et activités
 ```vb
@@ -95,7 +95,7 @@ Next k
 - Recherche de la description d'activité à partir du code analytique.
 - Utilise la feuille "Activités A charger" comme table de référence.
 
-![Mapping analytique (placeholder)](../../assets/images/placeholder-mapping.png)
+![Mapping analytique (placeholder)](/assets/images/placeholder-mapping.png)
 
 ### 5. Mise à jour ou création des lignes
 ```vb
@@ -124,7 +124,7 @@ End If
 - Si trouvée : mise à jour de la colonne des heures (dynamique selon le mois).
 - Si non trouvée : insertion de la nouvelle activité avec type et description.
 
-![Mise à jour lignes (placeholder)](../../assets/images/placeholder-update-rows.png)
+![Mise à jour lignes (placeholder)](/assets/images/placeholder-update-rows.png)
 
 ### 6. Nettoyage des activités non présentes
 ```vb
@@ -153,7 +153,7 @@ Set dictActivitesCible = Nothing
 - Fermeture du classeur source sans enregistrement.
 - Libération de toutes les variables de mémoire.
 
-![Nettoyage (placeholder)](../../assets/images/placeholder-cleanup.png)
+![Nettoyage (placeholder)](/assets/images/placeholder-cleanup.png)
 
 ## Points clés d'implémentation
 
