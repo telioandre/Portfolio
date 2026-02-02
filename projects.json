@@ -24,38 +24,6 @@
     "image": "assets/images/chat-app.png"
   },
   {
-    "title": "Stockage type Google Drive (en cours)",
-    "description": "Application web de stockage/partage de fichiers (projet en cours) avec gestion des droits et upload.",
-    "tech": ["React", "Node.js", "MongoDB", "Cloud Storage"],
-    "repoUrl": "",
-    "liveUrl": "",
-    "image": "assets/images/drive-like.png"
-  },
-  {
-    "title": "REST APIs multi-stack",
-    "description": "Divers services REST réalisés en PHP, React et C# pour explorer plusieurs stacks backend/frontend.",
-    "tech": ["PHP Symfony", "React", "C#", "ASP.NET"],
-    "repoUrl": "",
-    "liveUrl": "",
-    "image": "assets/images/rest-apis.png"
-  },
-  {
-    "title": "Téléphone IoT",
-    "description": "Prototype de téléphone IoT avec connectivité et pilotage embarqué.",
-    "tech": ["IoT", "C++", "Arduino"],
-    "repoUrl": "",
-    "liveUrl": "",
-    "image": "assets/images/iot-phone.png"
-  },
-  {
-    "title": "Application mobile Kotlin",
-    "description": "Application Android Kotlin développée sous Android Studio (UI native, navigation, stockage local).",
-    "tech": ["Kotlin", "Android Studio"],
-    "repoUrl": "",
-    "liveUrl": "",
-    "image": "assets/images/kotlin-app.png"
-  },
-  {
     "title": "Générateur d'incidents ServiceNow",
     "description": "Application Python (pandas) générant des incidents aléatoires pour ServiceNow afin de simuler des flux de support.",
     "tech": ["Python", "Pandas", "ServiceNow"],
@@ -86,5 +54,38 @@
     "repoUrl": "",
     "liveUrl": "",
     "image": "assets/images/bot_logo.png"
+  },  
+  
+  {
+    "title": "REST APIs multi-stack",
+    "description": "Divers services REST réalisés en PHP, React et C# pour explorer plusieurs stacks backend/frontend.",
+    "tech": ["PHP Symfony", "React", "C#", "ASP.NET"],
+    "repoUrl": "",
+    "liveUrl": "",
+    "image": "assets/images/rest-apis.png"
+  },
+  {
+    "title": "Téléphone IoT",
+    "description": "Prototype de téléphone IoT avec connectivité et pilotage embarqué.",
+    "tech": ["IoT", "C++", "Arduino"],
+    "repoUrl": "",
+    "liveUrl": "",
+    "image": "assets/images/iot-phone.png"
+  },
+  {
+    "title": "Application mobile Kotlin",
+    "description": "Application Android Kotlin développée sous Android Studio (UI native, navigation, stockage local).",
+    "tech": ["Kotlin", "Android Studio"],
+    "repoUrl": "",
+    "liveUrl": "",
+    "image": "assets/images/kotlin-app.png"
+  },
+  {
+    "title": "Stockage type Google Drive (en cours)",
+    "description": "Application web de stockage/partage de fichiers (projet en cours) avec gestion des droits et upload.",
+    "tech": ["React", "Node.js", "MongoDB", "Cloud Storage"],
+    "repoUrl": "",
+    "liveUrl": "",
+    "image": "assets/images/drive-like.png"
   }
 ]
