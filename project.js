@@ -90,34 +90,14 @@ async function loadProject(){
     const res = await fetch(detailsPath);
     if(res.ok){
       const md = await res.text();
-      console.log('[Project.js] Markdown chargé, longueur:', md.length);
-      
       let html = window.marked ? window.marked.parse(md) : md.replace(/\n/g,'<br>');
-      console.log('[Project.js] HTML après conversion marked:', html.substring(0, 500));
-      
-      // Corriger les chemins relatifs des images et vidéos dans le markdown
-      // Remplacer tous les chemins assets/ par le chemin absolu depuis la racine
-      const baseUrl = window.location.pathname.includes('/Portfolio/') 
-        ? '/Portfolio/' 
-        : '/';
-      console.log('[Project.js] Base URL détecté:', baseUrl);
-      console.log('[Project.js] Pathname:', window.location.pathname);
-      
-      const beforeReplace = html;
+      const baseUrl = window.location.pathname.includes('/Portfolio/') ? '/Portfolio/' : '/';
       html = html.replace(/src="assets\//g, `src="${baseUrl}assets/`);
       html = html.replace(/src='assets\//g, `src='${baseUrl}assets/`);
       html = html.replace(/href="assets\//g, `href="${baseUrl}assets/`);
       html = html.replace(/href='assets\//g, `href='${baseUrl}assets/`);
-      
-      if (beforeReplace !== html) {
-        console.log('[Project.js] Chemins remplacés. Extrait après remplacement:', html.substring(0, 500));
-      } else {
-        console.log('[Project.js] ⚠️ Aucun chemin assets/ trouvé à remplacer');
-      }
-      
       const detailsEl = document.getElementById('details');
       detailsEl.innerHTML = html;
-      console.log('[Project.js] HTML injecté dans la page');
       // Générer une table des matières à partir des h2/h3
       const headings = detailsEl.querySelectorAll('h2, h3');
       if(headings.length){
